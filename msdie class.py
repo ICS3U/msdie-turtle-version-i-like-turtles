@@ -18,6 +18,16 @@ class msdie:
     def setValue(self, value):
         self.value = value
 
+    def one_dot():
+        for x in range(4):
+            t.forward(100)
+            t.right(90)
+        for x in range(4):
+            t.penup()
+            t.goto(50, -50)
+            t.dot(10, "Black")
+            t.pendown    
+    
     def drawSide4(self):
         t.penup()
         t.setpos(-100, 100)
@@ -46,7 +56,9 @@ class msdie:
 # code to test if this is working
 die1 = msdie(6)
 die1.roll()
-if die1.getValue() == 4:
+if die1.getValue() == 1:
+    die1.one_dot()
+elif die1.getValue() == 4:
     die1.drawSide4()
 
 print("die value is: ", die1.getValue())
