@@ -1,0 +1,50 @@
+import turtle
+from random import randrange
+
+
+class msdie:
+        def __init__(self, sides):
+            self.sides = sides
+            self.value = 1
+
+        def roll(self):
+            self.value = randrange(1, self.sides+1)
+
+        def getvalue(self):
+            return self.value
+
+        def setvalue(self, value):
+            self.value = value
+
+        def drawside3(self):
+            turtle.hideturtle()
+
+            def circle():
+                turtle.pendown()
+                turtle.begin_fill()
+                turtle.circle(30)
+                turtle.end_fill()
+                turtle.penup()
+
+            turtle.penup()
+            turtle.setpos(-200, 200)
+            turtle.pendown()
+
+            for i in range(4):
+                turtle.forward(400)
+                turtle.right(90)
+
+            turtle.penup()
+            turtle.setpos(-100, 70)  # 1st circle
+            circle()  # 1st circle
+            turtle.setpos(0, - 30)  # 2nd circle
+            circle()  # 2nd circle
+            turtle.setpos(100, -130)  # 3rd circle
+            circle()  # 3rd circle
+            turtle.done()  # 3rd circle
+
+die1 = msdie(6)
+die1.roll()
+print("die value is: ", die1.getvalue())
+if die1.getvalue() == 3:
+    die1.drawside3()
