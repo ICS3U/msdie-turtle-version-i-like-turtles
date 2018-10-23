@@ -95,31 +95,31 @@ if die1.getValue() == 4:
         for i in range(4):    # drawing the frame of the dice ( a square )
             t.forward(200)
             t.right(90)
-    def draw_dots():
+        def draw_dots():
+            t.penup()
+            t.setposition(-40, 60)  # drawing the first column of the dots
+            t.setheading(-90)
+            t.pendown()
+            t.dot(30,"blue")
+        for i in range(2):
+            t.penup()
+            t.forward(60)
+            t.pendown()
+            t.dot(30, "blue")
         t.penup()
-        t.setposition(-40, 60)  # drawing the first column of the dots
+        t.setposition(35, 60)   # drawing the second column of the dots
         t.setheading(-90)
         t.pendown()
-        t.dot(30,"blue")
-    for i in range(2):
-        t.penup()
-        t.forward(60)
-        t.pendown()
         t.dot(30, "blue")
-    t.penup()
-    t.setposition(35, 60)   # drawing the second column of the dots
-    t.setheading(-90)
-    t.pendown()
-    t.dot(30, "blue")
-   for i in range(2):
-       t.penup()
-       t.forward(60)
-       t.pendown()
-       t.dot(30, "blue")
-   draw_dots()
+       for i in range(2):
+           t.penup()
+           t.forward(60)
+           t.pendown()
+           t.dot(30, "blue")
+       draw_dots()
 
-t.hideturtle() # make the turtle invisible
-t.exitonclick() # quit when we choose
+    t.hideturtle() # make the turtle invisible
+    t.exitonclick() # quit when we choose
 
 # code to test if this is working
 print("die value is: ", die1.getValue())
