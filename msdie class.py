@@ -1,6 +1,7 @@
 # our first class
 from random import *
-
+import turtle
+t = turtle
 
 class msdie:
     def __init__(self, sides):
@@ -18,8 +19,7 @@ class msdie:
         self.value = value
 
     def drawSide4(self):
-        import turtle
-        t = turtle
+
         t.penup()
         t.setpos(-100, 100)
         t.pendown()
