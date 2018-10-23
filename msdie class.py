@@ -17,7 +17,25 @@ class msdie:
 
     def setValue(self, value):
         self.value = value
+    def side3():
+        #Set the starting position for the drawing of the square
+        t.penup()
+        t.setpos(-200,200)
+        t.pendown()
 
+                # Drawing the four sides of the square shaped size
+        for i in range(4):
+            t.forward(400)
+            t.right(90)
+        t.penup()
+        t.setpos(-100,70)
+        t.dot(30)
+        t.setpos(0, -30)
+        t.dot(30)
+        t.setpos(100,-130)
+        t.dot(30)
+        t.done()
+        t.exitonclick()
     def drawSide4(self):
 
         t.penup()
@@ -111,6 +129,8 @@ if die1.getValue() == 2:
         y += 40
 
  #exit the window when the user clicks the screen
+if die1.getValue() == 3:
+    die1.side3()
 if die1.getValue() == 4:
     die1.drawSide4()
 if die1.getValue() == 5:
