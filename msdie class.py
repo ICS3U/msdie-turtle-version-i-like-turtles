@@ -47,7 +47,7 @@ class msdie:
 # code to test if this is working
 die1 = msdie(6)
 die1.roll()
-# if die1.getValue() == 4:
-die1.drawSide4()
+if die1.getValue() == 4:
+    die1.drawSide4()
 
 print("die value is: ", die1.getValue())
