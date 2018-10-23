@@ -18,17 +18,8 @@ class msdie:
     def setValue(self, value):
         self.value = value
 
-    def one_dot():
-        for x in range(4):
-            t.forward(100)
-            t.right(90)
-        for x in range(4):
-            t.penup()
-            t.goto(50, -50)
-            t.dot(10, "Black")
-            t.pendown    
-    
     def drawSide4(self):
+
         t.penup()
         t.setpos(-100, 100)
         t.pendown()
@@ -52,13 +43,8 @@ class msdie:
         t.pendown()
         t.dot(25)
         t.exitonclick()
-
-# code to test if this is working
 die1 = msdie(6)
 die1.roll()
-
-if die1.getValue() == 1:
-    die1.one_dot()
 
 #check if the dice side is 2
 if die1.getValue() == 2:
@@ -100,31 +86,31 @@ if die1.getValue() == 2:
 if die1.getValue() == 4:
     die1.drawSide4()
     
-if die1.getValue() == 6:
-   t.screensize(500, 500)
-   t.speed(4)
-   t.penup()   # not drawing when moving
-   t.setpos(-100, 100)  # setting up the start position
-   t.pendown()   # drawing when moving
-   for i in range(4):    # drawing the frame of the dice ( a square )
-       t.forward(200)
-       t.right(90)
-   def draw_dots():
-       t.penup()
-       t.setposition(-40, 60)  # drawing the first column of the dots
-       t.setheading(-90)
-       t.pendown()
-       t.dot(30,"blue")
-   for i in range(2):
-       t.penup()
-       t.forward(60)
-       t.pendown()
-       t.dot(30, "blue")
-   t.penup()
-   t.setposition(35, 60)   # drawing the second column of the dots
-   t.setheading(-90)
-   t.pendown()
-   t.dot(30, "blue")
+    if die1.getValue() == 6:
+        t.screensize(500, 500)
+        t.speed(4)
+        t.penup()   # not drawing when moving
+        t.setpos(-100, 100)  # setting up the start position
+        t.pendown()   # drawing when moving
+        for i in range(4):    # drawing the frame of the dice ( a square )
+            t.forward(200)
+            t.right(90)
+    def draw_dots():
+        t.penup()
+        t.setposition(-40, 60)  # drawing the first column of the dots
+        t.setheading(-90)
+        t.pendown()
+        t.dot(30,"blue")
+    for i in range(2):
+        t.penup()
+        t.forward(60)
+        t.pendown()
+        t.dot(30, "blue")
+    t.penup()
+    t.setposition(35, 60)   # drawing the second column of the dots
+    t.setheading(-90)
+    t.pendown()
+    t.dot(30, "blue")
    for i in range(2):
        t.penup()
        t.forward(60)
