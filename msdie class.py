@@ -51,3 +51,46 @@ die1.roll()
 die1.drawSide4()
 
 print("die value is: ", die1.getValue())
+
+#check if the dice side is 2
+if die1.getValue() == 2:
+
+    #if so, import the turtle module
+    import turtle
+
+    #set the background color to yellow. and hide turtle
+    turtle.bgcolor("yellow")
+    turtle.hideturtle()
+
+    #begin the fillinf process, making the color white
+    turtle.fillcolor("white")
+    turtle.begin_fill()
+
+    #draw the four sides
+    for i in range (4):
+        turtle.forward (90)
+        turtle.left(90)
+
+    #fill the square made
+    turtle.end_fill()
+
+    for z in range (die1.getValue()):
+        #lift the pen up
+        turtle.penup()
+
+        #go to the given x,y coordinates
+        turtle.goto(x,y)
+
+        #put the pendown
+        turtle.pendown()
+
+        #make a 10 pixel wide black dot
+        turtle.dot(10,"black")
+
+        #add 40 to the coordinates
+        x += 40
+        y += 40
+
+    #exit the window when the user clicks the screen
+    turtle.exitonclick()
+
