@@ -1,0 +1,22 @@
+def side3():
+    #Set the starting position for the drawing of the square
+    turtle.penup()
+    turtle.setpos(-200,200)
+    turtle.pendown()
+
+            # Drawing the four sides of the square shaped size
+    for i in range(4):
+        turtle.forward(400)
+        turtle.right(90)
+    turtle.penup()
+    turtle.setpos(-100,70)
+    turtle.dot(30)
+    turtle.setpos(0, -30)
+    turtle.dot(30)
+    turtle.setpos(100,-130)
+    turtle.dot(30)
+    turtle.done()
+    turtle.exitonclick()
+
+if die1.getValue()==3:
+        side3()
