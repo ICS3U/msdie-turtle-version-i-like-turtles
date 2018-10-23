@@ -76,8 +76,12 @@ class msdie:
 # code to test if this is working
 die1 = msdie(6)
 die1.roll()
-# if die1.getValue() == 4:
-die1.drawSide4()
+
+
+if die1.getValue() == 4:
+    die1.drawSide4()
+    
+if die1.getValue() ==5:
 die1.side5(200, 20)
 
 print("die value is: ", die1.getValue())
