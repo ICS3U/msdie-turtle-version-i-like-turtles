@@ -1,6 +1,7 @@
 # our first class
 from random import *
-
+import turtle
+t = turtle
 
 class msdie:
     def __init__(self, sides):
@@ -18,8 +19,6 @@ class msdie:
         self.value = value
 
     def drawSide4(self):
-        import turtle
-        t = turtle
         t.penup()
         t.setpos(-100, 100)
         t.pendown()
@@ -47,11 +46,6 @@ class msdie:
 # code to test if this is working
 die1 = msdie(6)
 die1.roll()
-# if die1.getValue() == 4:
-die1.drawSide4()
-
-print("die value is: ", die1.getValue())
-
 #check if the dice side is 2
 if die1.getValue() == 2:
 
@@ -91,6 +85,9 @@ if die1.getValue() == 2:
         x += 40
         y += 40
 
-    #exit the window when the user clicks the screen
-    turtle.exitonclick()
+ #exit the window when the user clicks the screen
+if die1.getValue() == 4:
+    die1.drawSide4()
+turtle.exitonclick()
 
+print("die value is: ", die1.getValue())
